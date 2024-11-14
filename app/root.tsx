@@ -8,6 +8,8 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
+import '@boschrexroth/nextgen-web-ui-toolkit/dist/nextgen-web-ui-toolkit/nextgen-web-ui-toolkit.css';
+import { defineCustomElements } from "@boschrexroth/nextgen-web-ui-toolkit-react";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -41,5 +43,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+
+  defineCustomElements();
+
   return <Outlet />;
 }
