@@ -11,15 +11,22 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@ai-sdk/azure": "^0.0.52",
     "@boschrexroth/nextgen-web-ui-toolkit": "^1.5.2",
     "@boschrexroth/nextgen-web-ui-toolkit-react": "^1.5.2",
     "@remix-run/node": "^2.14.0",
     "@remix-run/react": "^2.14.0",
     "@remix-run/serve": "^2.14.0",
+    "ai": "^3.4.33",
+    "clsx": "^2.1.1",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remix-flat-routes": "^0.6.5"
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "remix-flat-routes": "^0.6.5",
+    "tailwind-merge": "^2.5.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.14.0",
