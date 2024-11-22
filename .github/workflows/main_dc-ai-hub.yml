@@ -23,6 +23,9 @@ jobs:
           echo "//lo-artifact.de.bosch.com/artifactory/api/npm/npm-automationx/:_auth = ${{ secrets.JFROG_NPM_AUTH_TOKEN }}" >> .npmrc
           echo "always-auth = true" >> .npmrc
           echo "legacy-peer-deps = true" >> .npmrc
+          echo "progress = true" >> .npmrc
+          echo "loglevel = verbose" >> .npmrc
+          echo "strict-ssl = true" >> .npmrc
 
       - name: Set up Node.js version
         uses: actions/setup-node@v3
