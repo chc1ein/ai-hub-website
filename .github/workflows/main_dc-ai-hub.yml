@@ -16,20 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 'Create .npmrc'
-        shell: bash
-        run: |
-
-          echo "registry=https://registry.npmjs.org/" > .npmrc
-          echo "@boschrexroth:registry=https://lo-artifact.de.bosch.com/artifactory/api/npm/npm-automationx/" > .npmrc
-          echo "//lo-artifact.de.bosch.com/artifactory/api/npm/npm-automationx/:_auth = ${{ secrets.JFROG_NPM_AUTH_TOKEN }}" >> .npmrc
-          echo "//lo-artifact.de.bosch.com/artifactory/api/npm/npm-automationx/:always-auth = true" >> .npmrc
-          echo "legacy-peer-deps = true" >> .npmrc
-          echo "progress = true" >> .npmrc
-          echo "loglevel = verbose" >> .npmrc
-          echo "strict-ssl = false" >> .npmrc
-          echo "fetch-retries = 99" >> .npmrc
-
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
